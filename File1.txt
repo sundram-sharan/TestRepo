@@ -7,3 +7,4 @@ Change 2 :- Simulate change 2 in File1.
 Change 3 :- Simulate change3 in File 1.
 
 Change 4 :- Change made for conflict.
+

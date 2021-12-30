@@ -1,0 +1,282 @@
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1
+$ git config --global user.name "Sundram"
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1
+$ git config --global user.email "sundram_sharan@persistent.com"
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1
+$ git init
+Initialized empty Git repository in D:/Persistent Training/GitAssignment1/.git/
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        File1.txt
+        FileToDelete.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git add .
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   File1.txt
+        new file:   FileToDelete.txt
+
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git commit -m "This is First Commit, Tracking File1 and FileToDelete"
+[master (root-commit) a312e60] This is First Commit, Tracking File1 and FileToDelete
+ 3 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 File1.txt
+ create mode 100644 FileToDelete.txt
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git commit -am "Change1 in File1"
+[master 2778e4e] Change1 in File1
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git commit -am "Change2 in File2"
+[master 9991021] Change2 in File2
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --oneline
+9991021 (HEAD -> master) Change2 in File2
+2778e4e Change1 in File1
+a312e60 This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    FileToDelete.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git rm FileToDelete.txt
+rm 'FileToDelete.txt'
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    FileToDelete.txt
+
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git commit -m "FileToDelete is deleted"
+[master e98a0d9] FileToDelete is deleted
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 FileToDelete.txt
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --oneline
+e98a0d9 (HEAD -> master) FileToDelete is deleted
+9991021 Change2 in File2
+2778e4e Change1 in File1
+a312e60 This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log
+commit e98a0d9521d122ba0876d057f023d7e4bb806b69 (HEAD -> master)
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:43:38 2021 +0530
+
+    FileToDelete is deleted
+
+commit 99910216bfa36c513130b61df2a28ac43283fa3b
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:37:22 2021 +0530
+
+    Change2 in File2
+
+commit 2778e4e8d5636904c6032a82457128f563e3d923
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:36:44 2021 +0530
+
+    Change1 in File1
+
+commit a312e606ad92032c0a176d8d771a66e76474b943
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:34:18 2021 +0530
+
+    This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --oneline -3
+e98a0d9 (HEAD -> master) FileToDelete is deleted
+9991021 Change2 in File2
+2778e4e Change1 in File1
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --since="12/29/2021" --until="12/30/2021"
+commit e98a0d9521d122ba0876d057f023d7e4bb806b69 (HEAD -> master)
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:43:38 2021 +0530
+
+    FileToDelete is deleted
+
+commit 99910216bfa36c513130b61df2a28ac43283fa3b
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:37:22 2021 +0530
+
+    Change2 in File2
+
+commit 2778e4e8d5636904c6032a82457128f563e3d923
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:36:44 2021 +0530
+
+    Change1 in File1
+
+commit a312e606ad92032c0a176d8d771a66e76474b943
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:34:18 2021 +0530
+
+    This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --grep "File1"
+commit 2778e4e8d5636904c6032a82457128f563e3d923
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:36:44 2021 +0530
+
+    Change1 in File1
+
+commit a312e606ad92032c0a176d8d771a66e76474b943
+Author: Sundram <sundram_sharan@persistent.com>
+Date:   Thu Dec 30 20:34:18 2021 +0530
+
+    This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git reset --hard 9991021
+HEAD is now at 9991021 Change2 in File2
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --oneline
+9991021 (HEAD -> master) Change2 in File2
+2778e4e Change1 in File1
+a312e60 This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        TestFile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git rm File1.txt
+rm 'File1.txt'
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git add .
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    File1.txt -> TestFile.txt
+
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git commit -m "Renamed File1 to TestFile"
+[master 3080011] Renamed File1 to TestFile
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename File1.txt => TestFile.txt (100%)
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --oneline
+3080011 (HEAD -> master) Renamed File1 to TestFile
+9991021 Change2 in File2
+2778e4e Change1 in File1
+a312e60 This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git revert 3080011
+hint: Waiting for your editor to close the file... unix2dos: converting file D:/Persistent Training/GitAssignment1/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file D:/Persistent Training/GitAssignment1/.git/COMMIT_EDITMSG to Unix format...
+[master 33b58a2] Revert "Renamed File1 to TestFile"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename TestFile.txt => File1.txt (100%)
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$ git log --oneline
+33b58a2 (HEAD -> master) Revert "Renamed File1 to TestFile"
+3080011 Renamed File1 to TestFile
+9991021 Change2 in File2
+2778e4e Change1 in File1
+a312e60 This is First Commit, Tracking File1 and FileToDelete
+
+Asus@LAPTOP-1D50V5AE MINGW64 /d/Persistent Training/GitAssignment1 (master)
+$

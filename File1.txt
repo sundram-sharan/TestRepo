@@ -1,7 +1,9 @@
-This is File1.
+This is File 1.
 
-Change 1 :- Simulate change 1 in File1.
+Change 1 :- Simulate change 1 in File 1.
 
-Change 2 :- Simulate change2 in File1.
+Change 2 :- Simulate change 2 in File1.
 
-Change 3 :- Change made for conflict
+Change 3 :- Simulate change3 in File 1.
+
+Change 4 :- Change made for conflict.

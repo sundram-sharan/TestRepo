@@ -1,3 +1,5 @@
 This is File1.
 
 Change1 :- Simulate change1 in File1.
+
+Change2 :- Simulate change2 in File2.
